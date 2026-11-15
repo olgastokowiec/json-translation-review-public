@@ -27,7 +27,7 @@ You need a Mac and Google Chrome.
 sh mac/make-app.sh
 ```
 
-This creates `Translation Review.app` in your Applications folder. It opens the review page in Chrome. Drag it to the Dock if you like. Run the command again if you move this folder.
+This creates `Translation Review Public.app` in your Applications folder. It opens the review page in Chrome. Drag it to the Dock if you like. Run the command again if you move this folder.
 
 ## Using it with your own project
 

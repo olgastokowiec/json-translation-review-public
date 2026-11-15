@@ -18,39 +18,42 @@
       "target": "Alles, was du brauchst, an einem Ort.",
       "note": "Informal tone: use \"du\", not \"Sie\".",
       "placeholders": [],
-      "status": "flagged"
+      "status": "approved"
     },
     {
       "key": "home:cta",
       "source": "Get started",
-      "target": "",
+      "target": "Los geht's",
       "options": [
         "Loslegen",
         "Jetzt starten",
         "Los geht's"
       ],
-      "placeholders": []
+      "placeholders": [],
+      "status": "approved"
     },
     {
       "key": "settings:save",
       "source": "Save changes",
       "target": "",
-      "placeholders": []
+      "placeholders": [],
+      "status": "flagged"
     },
     {
       "key": "settings:saved",
       "source": "Saved {{count}} items to your library.",
-      "previousSource": "Saved {{count}} items.",
       "target": "{{count}} Elemente gespeichert.",
       "placeholders": [
         "count"
-      ]
+      ],
+      "status": "approved"
     },
     {
       "key": "settings:delete",
       "source": "Delete account",
       "target": "Konto löschen",
-      "placeholders": []
+      "placeholders": [],
+      "status": "approved"
     }
   ]
 }
