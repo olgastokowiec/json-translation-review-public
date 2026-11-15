@@ -45,6 +45,8 @@ You can also write your own scripts: the format is small, and `schema/translatio
 
 **Translation options.** When a string has three suggested translations, they appear as A, B and C above the text box. Click one (or press Ctrl+1, 2 or 3) to put it in the text box, edit it if you like, then approve. The text box stays empty until you choose. Once every string in the file is approved, the options are removed from the file.
 
+**Where do the options come from?** The app only reads the `options` list of each entry; it doesn't create it. You (or an AI or machine translation tool) fill it in by editing the review file: put up to three candidate translations in each entry's `options`. The prepare script doesn't translate, but it keeps existing options when you run it again. If an entry has no options, you simply type the translation yourself.
+
 **If the file changes while the app is open** (for example a script refreshed it), the app notices before saving, loads the new version, and applies your edit on top. Nothing is overwritten.
 
 ## The file format
