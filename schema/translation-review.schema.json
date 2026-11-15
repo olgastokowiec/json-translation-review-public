@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "translation-review/3",
+  "title": "Translation file (one language)",
+  "description": "Written by a prepare script (for example review/<code>.json), reviewed in the Translation Review app, read by a publish script. Version 1 and 2 files (no status, no previousSource, no options) are still accepted and are saved as version 3.",
+  "type": "object",
+  "required": ["format", "sourceLanguage", "targetLanguage", "entries"],
+  "properties": {
+    "format": { "enum": ["translation-review/3", "translation-review/2", "translation-review/1"] },
+    "sourceLanguage": { "const": "en" },
+    "targetLanguage": { "type": "string", "pattern": "^[a-z]{2,3}(-[A-Za-z0-9]+)*$", "description": "For example de." },
+    "guidelines": { "type": "string", "description": "Optional text recorded in the file, for example the path of a style guide. The app does not read it." },
+    "entries": {
+      "type": "array",
+      "description": "One entry per English string, in the order of the source files.",
+      "items": {
+        "type": "object",
+        "required": ["key", "source", "target", "placeholders"],
+        "additionalProperties": false,
+        "properties": {
+          "key": { "type": "string", "description": "namespace:path.to.string, for example about:meta.title. Never edited." },
+          "source": { "type": "string", "description": "The current English text. Never edited." },
+          "previousSource": {
+            "type": "string",
+            "description": "The English text when this translation was last reviewed. Present only while the English has changed since; approving removes it."
+          },
+          "target": { "type": "string", "description": "The translation. Empty means not translated yet (the English is shown instead)." },
+          "options": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Three translation options proposed by the agent for the reviewer to choose from. Only new and changed strings get them. The reviewer picks one into target. Removed from every string once all strings in the file are approved."
+          },
+          "note": { "type": "string", "description": "Context for the translator. Never edited." },
+          "placeholders": { "type": "array", "items": { "type": "string" }, "description": "Placeholder names in the English, like name for {{name}}. The translation must use the same ones." },
+          "status": { "enum": ["approved", "flagged"], "description": "Review status. No status means to review." }
+        }
+      }
+    }
+  }
+}

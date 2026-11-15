@@ -1,0 +1,56 @@
+{
+  "format": "translation-review/3",
+  "sourceLanguage": "en",
+  "targetLanguage": "de",
+  "entries": [
+    {
+      "key": "home:title",
+      "source": "Welcome, {{name}}",
+      "target": "Willkommen, {{name}}",
+      "placeholders": [
+        "name"
+      ],
+      "status": "approved"
+    },
+    {
+      "key": "home:subtitle",
+      "source": "Everything you need, in one place.",
+      "target": "Alles, was du brauchst, an einem Ort.",
+      "note": "Informal tone: use \"du\", not \"Sie\".",
+      "placeholders": [],
+      "status": "flagged"
+    },
+    {
+      "key": "home:cta",
+      "source": "Get started",
+      "target": "",
+      "options": [
+        "Loslegen",
+        "Jetzt starten",
+        "Los geht's"
+      ],
+      "placeholders": []
+    },
+    {
+      "key": "settings:save",
+      "source": "Save changes",
+      "target": "",
+      "placeholders": []
+    },
+    {
+      "key": "settings:saved",
+      "source": "Saved {{count}} items to your library.",
+      "previousSource": "Saved {{count}} items.",
+      "target": "{{count}} Elemente gespeichert.",
+      "placeholders": [
+        "count"
+      ]
+    },
+    {
+      "key": "settings:delete",
+      "source": "Delete account",
+      "target": "Konto löschen",
+      "placeholders": []
+    }
+  ]
+}
